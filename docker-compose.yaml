@@ -1,0 +1,11 @@
+version: "3.8"
+
+services:
+  server:
+    image: restic-server:0.13.0
+    container_name: restic-0.13
+    restart: always
+    volumes:
+      - /share/Backup-Restic:/data
+    ports:
+      - "8000:8000"
